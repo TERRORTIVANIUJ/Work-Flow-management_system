@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Work Flow Management System</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -44,6 +44,7 @@
         <table class="table">
             <caption class="text-center">All Tasks</caption>
             <tr>
+                <th>Name</th>
                 <th>Task</th>
                 <th>Project</th>
                 <th>Status</th>
@@ -67,11 +68,11 @@
     
                 <div class="modal-body">
                     <form method="POST" onsubmit="return taskObj.addTask(this);" id="form-task-hour-calculator">
-                        
-                        <!-- select project from already created -->
+    
+                        <!-- enter user's name -->
                         <div class="form-group">
-                            <label>Project</label>
-                            <select name="project" id="add-task-project" class="form-control" required></select>
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="What is the user's name ?" required />
                         </div>
     
                         <!-- create new project -->
@@ -80,6 +81,12 @@
                             <input type="text" name="new_project" id="add-project" class="form-control" placeholder="Project Name">
     
                             <button type="button" onclick="taskObj.addProject();" class="btn btn-primary" style="margin-top: 10px;">Add Project</button>
+                        </div>
+    
+                        <!-- select project from already created -->
+                        <div class="form-group">
+                            <label>Project</label>
+                            <select name="project" id="add-task-project" class="form-control" required></select>
                         </div>
     
                         <!-- enter task -->

@@ -3,7 +3,7 @@ import cors from 'cors';
 
 const app = express();
 
-app.use("/javaFolder", express.static('./javaFolder/'));
+app.use("/js", express.static('./js/'));
 app.use("/css", express.static('./css/'));
 app.use(express.static('public'));
 app.use(express.json());
